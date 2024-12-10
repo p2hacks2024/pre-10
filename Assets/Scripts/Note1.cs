@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Note1 : MonoBehaviour
 {
-    float speed; 
+    float speed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("hello");
-        speed = 5; 
+        //Debug.Log("hello");
+        speed = 5;
     }
 
     // Update is called once per frame
@@ -17,3 +17,4 @@ public class NewMonoBehaviourScript : MonoBehaviour
         transform.Translate(speed * Time.deltaTime, 0, 0);
     }
 }
+
