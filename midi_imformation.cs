@@ -65,7 +65,7 @@ namespace Logger
             Debug.Log(count_38);
             for (int i = 0; i < count_38; i++)
             {
-                spawn_prefab[i] = Random.Range(1,3);//個数がオブジェクトの個数が3つだから今回1～３にした。
+                spawn_prefab[i] = Random.Range(0,2);//個数がオブジェクトの個数が3つだから今回1～３にした。
                 Debug.Log(spawn_prefab[i]);
             }
            /* 確認用
