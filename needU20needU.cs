@@ -18,11 +18,11 @@ namespace Logger
     public class needU20needU : MonoBehaviour
     {
         [SerializeField] private MidiAnimationAsset _asset;
-        int[] data_37 = new int[500];//ノートナンバー４３番の音のノートオンの時のticksを格納
+        int[] data_37 = new int[500];//ノートナンバー37番の音のノートオンの時のticksを格納
         float[] data_37_realtime = new float[500];//tickをリアルタイムに直したものを格納
         int temp = 120;//曲のテンポ
         float count_time = 0;//ノーツを生成する時間を管理するための時間
-        int count_37 = 0;//ノートナンバー４３の信号の数を記録
+        int count_37 = 0;//ノートナンバー37の信号の数を記録
         int score = 0;
         int[] spawn_prefab = new int[500];//どのオブジェクトを出すかの指定配列。
         [SerializeField] GameObject[] MessageObj; //prefabを複数指定。
@@ -40,9 +40,9 @@ namespace Logger
                         data_37_realtime[count_37] = (float)midiEvent.time / (temp * 8);
                         count_37++;
                     }
-                    
+
                     //ノーツナンバー確認用
-                     Debug.Log(midiEvent.ToString());
+                    Debug.Log(midiEvent.ToString());
                 }
             }
             Debug.Log(count_37);
@@ -73,30 +73,13 @@ namespace Logger
                 /*タイミング調整のために-3.5をつけている。Time.deltaTimeを足すことにより
                 二つ以上のオブジェクトの生成を防ぐ。
                 */
-                //好きなものを使うと良い
                 {
                     Instantiate(MessageObj[spawn_prefab[i]], new Vector3(0, 0, 0), Quaternion.identity);
                     //Vector3(x,y,z)第一引数を変えると生成されるｘ座標が変わる。
                     Debug.Log("data_37_realtime " + data_37_realtime);
                 }
-                //if (count_time > data_36_realtime[i] -3.5  && count_time < data_36_realtime[i]-3.5+Time.deltaTime)
-                //{
-                //    Instantiate(Cube, new Vector3(0, 0, 0), Quaternion.identity);
-                //    Debug.Log("data_36_realtime " + data_36_realtime);
-                //}
-                //if (count_time > data_43_realtime[i] - 3.5 && count_time < data_43_realtime[i]-3.5+Time.deltaTime)
-                //{
-                //    Instantiate(Cube, new Vector3(0, 0, 0), Quaternion.identity);
-                //    Debug.Log("data_43_realtime " + data_43_realtime);
-                //}
-            }
-            /*
-            if (Input.GetKeyDown(KeyCode.Space))//scoreが一定を超えたらの条件分岐
-            {
 
             }
-             */
-
         }
     }
 }
