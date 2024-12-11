@@ -7,7 +7,7 @@ public class Note : MonoBehaviour
     void Start()
     {
         //Debug.Log("hello");
-        speed = 1; 
+        speed = 4; 
     }
 
 

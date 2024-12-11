@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -9,11 +10,21 @@ public class JudgementArea : MonoBehaviour
     //・近くにノーツがあるのか                Rayを飛ばして当たったら近い!
     //・どれぐらいの近さなのか => (評価)
 
+    //[SerializeField] GameObject[] MessageObj;
+
     [SerializeField] Vector2 judgementAreaSize;
+    [SerializeField] GameObject[] MessageObj; //判定メッセージ
     public Vector2 extendJudgementAreaSize = new Vector2(2, 0);
     public double perfectArea;
     public double goodArea;
     public double badArea;
+
+    int count = 10;
+    float reload_time = 2; // リロードにかかる時間
+    float real_time = 0;   // リロード時間のカウント用
+    int score = 0;
+    string score_text = "a";
+
 
     private void Start()
     {
@@ -23,49 +34,80 @@ public class JudgementArea : MonoBehaviour
         badArea = 2;  //全体
     }
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("spaceキーを押した");
-            RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, judgementAreaSize, 0, Vector2.zero);
-            if (hit2D)
-            {
-                //Debug.Log("ノーツがぶつかった");
-                float distance = Mathf.Abs(transform.position.x - hit2D.transform.position.x);
-                //if (distance >= -1)
-                //{
-                //    if (distance < judgementAreaSize.x)
-                //    {
-                //        Debug.Log("GREATE!!");
-                //    }
-                //    else if (distance < judgementAreaSize.x + 3)
-                //    {
-                //        Debug.Log("EARLY");
-                //    }
-                //}
-                //else
-                //{
-                //    Debug.Log("LATER...");
-                //}
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    Instantiate(MessageObj[3], new Vector3(0, 0, 4), Quaternion.identity);
+        //}
 
-                Debug.Log(distance);
-                if (distance <= perfectArea)
+        real_time += Time.deltaTime;
+
+        if (real_time > reload_time) // リロードの時間中はスペースキーを押しても反応しない
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                count--;
+                if (count > 0)
                 {
-                    Debug.Log("execellent!!");
-                    Destroy(hit2D.collider.gameObject);
+                    RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, judgementAreaSize, 0, Vector2.zero);
+                    if (hit2D)
+                    {
+                        //Debug.Log("ノーツがぶつかった");
+                        float distance = Mathf.Abs(transform.position.x - hit2D.transform.position.x);
+
+
+                        Debug.Log(distance);
+                        if (distance <= perfectArea)
+                        {
+                            Debug.Log("execellent!!");
+                            GetComponent<AudioSource>().Play();
+                            Destroy(hit2D.collider.gameObject);
+                            message(0);
+
+                            score += 100;
+                            score_text = score.ToString(); // 修正箇所
+                            Debug.Log("Score: " + score);
+                        }
+                        else if (distance < goodArea)
+                        {
+                            Debug.Log("good");
+                            GetComponent<AudioSource>().Play();
+                            Destroy(hit2D.collider.gameObject);
+                            message(1);
+
+                            score += 50;
+                            score_text = score.ToString(); // 修正箇所
+                            Debug.Log("Score: " + score);
+                        }
+                        else if (distance < badArea)
+                        {
+                            Debug.Log("bad");
+                            GetComponent<AudioSource>().Play();
+                            Destroy(hit2D.collider.gameObject);
+                            message(2);
+
+                            score += 10;
+                            score_text = score.ToString(); // 修正箇所
+                            Debug.Log("Score: " + score);
+                        }
+                        message(4);
+                        //Destroy(hit2D.collider.gameObject);
+                    }
                 }
-                else if (distance < goodArea)
-                {
-                    Debug.Log("good");
-                    Destroy(hit2D.collider.gameObject);
-                }
-                else if(distance < badArea)
-                {
-                    Debug.Log("bad");
-                    Destroy(hit2D.collider.gameObject);
-                }
-                //Destroy(hit2D.collider.gameObject);
             }
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            count = 10;
+            Debug.Log("count: " + count);
+            real_time = 0;
+        }
+    }
+
+    void OnGUI()
+    {
+        // 文字列を画面に表示 
+        Rect rect = new Rect(10, 10, 300, 50);
+        GUI.Label(rect, score_text); // スコアを文字列で表示
     }
 
     //当たり判定を可視化するための関数
@@ -83,6 +125,16 @@ public class JudgementArea : MonoBehaviour
         //Gizmos.DrawCube(transform.position, new Vector2((0.5, 3));
         //Gizmos.DrawCube
 
+    }
+
+
+    public void message(int judge)
+    {
+        Vector3 upMessage = new Vector3(0, 0, 0);
+        Vector3 up = new Vector3(0, 0, 4);
+        Vector3 Message = new Vector3(-438, -238, 0);
+        Instantiate(MessageObj[judge], transform.position/*+ upMessage*/, Quaternion.identity);
+        Debug.Log(MessageObj[judge]);
     }
 }
 
