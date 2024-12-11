@@ -18,9 +18,9 @@ public class JudgementArea : MonoBehaviour
     private void Start()
     {
         //今は、ジャッジメントエリアは 6 にしてる
-        perfectArea = 0.5;//ジャッジバーと同じ横の長さ
-        goodArea = 2;
-        badArea = 4;  //全体
+        perfectArea = 0.5;//ジャッジバー / 2  の長さ (ジャッジバーの横の長さは目で0.5の長さにした)
+        goodArea = 1;
+        badArea = 2;  //全体
     }
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -47,7 +47,7 @@ public class JudgementArea : MonoBehaviour
                 //    Debug.Log("LATER...");
                 //}
 
-
+                Debug.Log(distance);
                 if (distance <= perfectArea)
                 {
                     Debug.Log("execellent!!");
@@ -79,8 +79,9 @@ public class JudgementArea : MonoBehaviour
         Gizmos.DrawCube(transform.position, judgementAreaSize); //全体 (bad)
         //Gizmos.color = Color.yellow;
         //Gizmos.DrawCube(transform.position, new Vector2(2, 3)); //
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawCube(transform.position, new Vector2((float)0.5, 3));
+        Gizmos.color = Color.red;
+        //Gizmos.DrawCube(transform.position, new Vector2((0.5, 3));
+        //Gizmos.DrawCube
 
     }
 }
