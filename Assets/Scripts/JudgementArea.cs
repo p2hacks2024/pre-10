@@ -1,6 +1,8 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 using UnityEngine.UIElements;
 
 public class JudgementArea : MonoBehaviour
@@ -10,10 +12,11 @@ public class JudgementArea : MonoBehaviour
     //・近くにノーツがあるのか                Rayを飛ばして当たったら近い!
     //・どれぐらいの近さなのか => (評価)
 
-    //[SerializeField] GameObject[] MessageObj;
 
+
+    [SerializeField] GameObject textEffectPrefab;//
     [SerializeField] Vector2 judgementAreaSize;
-    [SerializeField] GameObject[] MessageObj; //判定メッセージ
+    //[SerializeField] GameObject[] MessageObj; //判定メッセージ
     public Vector2 extendJudgementAreaSize = new Vector2(2, 0);
     public double perfectArea;
     public double goodArea;
@@ -23,7 +26,7 @@ public class JudgementArea : MonoBehaviour
     float reload_time = 2; // リロードにかかる時間
     float real_time = 0;   // リロード時間のカウント用
     int score = 0;
-    string score_text = "a";
+    string score_text = "0";
 
 
     private void Start()
@@ -61,8 +64,7 @@ public class JudgementArea : MonoBehaviour
                             Debug.Log("execellent!!");
                             GetComponent<AudioSource>().Play();
                             Destroy(hit2D.collider.gameObject);
-                            message(0);
-
+                            SpawnTextEffect("perfect", transform.position);
                             score += 100;
                             score_text = score.ToString(); // 修正箇所
                             Debug.Log("Score: " + score);
@@ -72,7 +74,8 @@ public class JudgementArea : MonoBehaviour
                             Debug.Log("good");
                             GetComponent<AudioSource>().Play();
                             Destroy(hit2D.collider.gameObject);
-                            message(1);
+                            
+                            SpawnTextEffect("good", transform.position);
 
                             score += 50;
                             score_text = score.ToString(); // 修正箇所
@@ -83,13 +86,14 @@ public class JudgementArea : MonoBehaviour
                             Debug.Log("bad");
                             GetComponent<AudioSource>().Play();
                             Destroy(hit2D.collider.gameObject);
-                            message(2);
+                            
+                            SpawnTextEffect("bad", transform.position);
 
                             score += 10;
                             score_text = score.ToString(); // 修正箇所
                             Debug.Log("Score: " + score);
                         }
-                        message(4);
+                        
                         //Destroy(hit2D.collider.gameObject);
                     }
                 }
@@ -100,14 +104,22 @@ public class JudgementArea : MonoBehaviour
             count = 10;
             Debug.Log("count: " + count);
             real_time = 0;
-        }
+        }  
+    }
+
+    public void SpawnTextEffect(string message, Vector3 position)
+    {
+        GameObject effectText = Instantiate(textEffectPrefab, position, Quaternion.identity);
+        JudgementEffect judgementEffect = effectText.GetComponent<JudgementEffect>();
+        judgementEffect.setText(message);
+        Destroy(effectText, 0.5f);
     }
 
     void OnGUI()
     {
         // 文字列を画面に表示 
         Rect rect = new Rect(10, 10, 300, 50);
-        GUI.Label(rect, score_text); // スコアを文字列で表示
+        GUI.Label(rect, "SCORE : " + score_text); // スコアを文字列で表示
     }
 
     //当たり判定を可視化するための関数
@@ -124,17 +136,6 @@ public class JudgementArea : MonoBehaviour
         Gizmos.color = Color.red;
         //Gizmos.DrawCube(transform.position, new Vector2((0.5, 3));
         //Gizmos.DrawCube
-
-    }
-
-
-    public void message(int judge)
-    {
-        Vector3 upMessage = new Vector3(0, 0, 0);
-        Vector3 up = new Vector3(0, 0, 4);
-        Vector3 Message = new Vector3(-438, -238, 0);
-        Instantiate(MessageObj[judge], transform.position/*+ upMessage*/, Quaternion.identity);
-        Debug.Log(MessageObj[judge]);
     }
 }
 
