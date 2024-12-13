@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Text;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.PostProcessing;
 
 public class JudgementArea : MonoBehaviour
 {
@@ -15,9 +16,9 @@ public class JudgementArea : MonoBehaviour
     [SerializeField] GameObject textEffectPrefab;//判定エフェクトのプレハブの受け取り
     [SerializeField] Vector2 judgementAreaSize;//
     Vector2 extendJudgementAreaSize = new Vector2(2, 0);
-    double perfectArea;
-    double goodArea;
-    double badArea;
+    double perfectArea = 0.5;
+    double goodArea = 1;
+    double badArea = 2;
     int count = 100;
     float reload_time = 2;
     float real_time = 0;
@@ -26,18 +27,49 @@ public class JudgementArea : MonoBehaviour
     float finish_time=5;
     string score_text = "0";
     string count_text = "10";
+    //double realTime = 0;
+    double saturatioRealTime = 0;
+    double countTime = 0.2;
 
 
-    private void Start()
+
+    public PostProcessVolume postProcessVolume; // Post Process Volumeを割り当てる
+    private ColorGrading colorGrading;          // Color Gradingエフェクトへの参照
+
+
+    //private void Start()
+    //{
+    //    //今は、ジャッジメントエリアは 4 にしてる
+    //    perfectArea = 0.5;//ジャッジバー / 2  の長さ (ジャッジバーの横の長さは目で1の長さにした)
+    //    goodArea = 1;
+    //    badArea = 2;  //全体
+    //}
+
+    void Start()
     {
-        //今は、ジャッジメントエリアは 4 にしてる
-        perfectArea = 0.5;//ジャッジバー / 2  の長さ (ジャッジバーの横の長さは目で1の長さにした)
-        goodArea = 1;
-        badArea = 2;  //全体
+        // VolumeからColor Gradingエフェクトを取得
+        if (postProcessVolume.profile.TryGetSettings(out colorGrading))
+        {
+            Debug.Log("Color Grading found!");
+        }
+        else
+        {
+            Debug.LogError("Color Grading not found in Post Process Volume.");
+        }
     }
+
+
+
     private void Update()
     {
+
         real_time += Time.deltaTime;
+        saturatioRealTime += Time.deltaTime;
+        if (saturatioRealTime > countTime) //彩度を戻している
+        {
+            SetSaturation(-40);
+        }
+
         if (real_time > reload_time)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -62,9 +94,12 @@ public class JudgementArea : MonoBehaviour
                             Destroy(hit2D.collider.gameObject);
                             GetComponent<AudioSource>().Play();//カメラのシャッター音
                             //SpawnTextEffect("perfect", transform.position);//判定エフェクトの表示
-                            Instantiate(textEffectPrefab, new Vector3(325, 185, 0), Quaternion.identity);
+                            //Instantiate(textEffectPrefab, new Vector3(325, 185, 0), Quaternion.identity);
                             score += 100;
                             score_text = score.ToString();
+
+                            SetSaturation(0);
+                            saturatioRealTime = 0;
 
                         }
                         else if (distance < goodArea)
@@ -76,6 +111,9 @@ public class JudgementArea : MonoBehaviour
                             score += 75;
                             score_text = score.ToString();
 
+                            SetSaturation(0);
+                            saturatioRealTime = 0;
+
                         }
                         else if (distance < badArea)
                         {
@@ -85,6 +123,9 @@ public class JudgementArea : MonoBehaviour
                             //SpawnTextEffect("bad", transform.position);//判定エフェクトの表示
                             score += 50;
                             score_text = score.ToString();
+
+                            SetSaturation(0);
+                            saturatioRealTime = 0;
 
                         }
                         //Destroy(hit2D.collider.gameObject);
@@ -126,6 +167,18 @@ public class JudgementArea : MonoBehaviour
     //    judgementEffect.setText(message);
     //    Destroy(effectText, 0.5f);
     //}
+
+    public void SetSaturation(float saturationValue)
+    {
+
+        if (colorGrading != null)
+        {
+            colorGrading.saturation.value = saturationValue; // 彩度を明るくする
+
+            
+            Debug.Log(colorGrading.saturation.value);
+        }
+    }
 
 
     //当たり判定を可視化するための関数
