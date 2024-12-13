@@ -26,6 +26,25 @@ namespace Logger
         int score = 0;
         int[] spawn_prefab = new int[500];//どのオブジェクトを出すかの指定配列。
         [SerializeField] GameObject[] MessageObj; //prefabを複数指定。
+        double spawn_time;//ノーツのタイミングを合わせるための時間
+        double spawn_time_calculate(double spawn_x, double hit_x, double note_speed)//引数は一から順にprefabの生成するｘ座標、判定のｘ座標、ノートのスピードである。
+        {
+            double spawn_time;
+            spawn_time = (spawn_x - hit_x) / note_speed;
+            if (spawn_time > 0)
+            {
+                return spawn_time;
+            }
+            else if (spawn_time < 0)
+            {
+                return spawn_time * -1;
+            }
+            else
+            {
+                return 0;
+            }
+            //returnは正の数で返す
+        }
         private void Start()
         {
             var midiEventSet = _asset.template.events;
@@ -40,28 +59,15 @@ namespace Logger
                         data_37_realtime[count_37] = (float)midiEvent.time / (temp * 8);
                         count_37++;
                     }
-
-                    //ノーツナンバー確認用
-                    Debug.Log(midiEvent.ToString());
                 }
             }
             Debug.Log(count_37);
-            //for (int i = 0; i < count_37; i++)
-            //{
-            //    spawn_prefab[i] = Random.Range(0,2);//個数がオブジェクトの個数が3つだから今回0～2にした。
-            //    Debug.Log(spawn_prefab[i]);
-            //}
-            /* 確認用
-             for (int i = 0; i < count_43; i++)
-             {
-                 Debug.Log("data_43 " + data_43[i]);
-                 Debug.Log("data_43_realtime " + data_43_realtime[i]);
-             }
-             for (int i = 0; i < count_38; i++)
-                 Debug.Log("data_38 " + data_38[i]);
-             for (int i = 0; i < count_36; i++)
-                 Debug.Log("data_36 " + data_36[i]);
-            */
+            for (int i = 0; i < count_37; i++)
+            {
+                spawn_prefab[i] = Random.Range(0, 5);//個数がオブジェクトの個数が6つだから今回0～5にした。
+                Debug.Log(spawn_prefab[i]);
+            }
+            spawn_time = spawn_time_calculate(-10, 0, 0);
         }
 
         private void Update()
@@ -69,12 +75,13 @@ namespace Logger
             count_time += Time.deltaTime;
             for (int i = 0; i < count_37; i++)
             {
-                if (count_time > data_37_realtime[i] && count_time < data_37_realtime[i] + Time.deltaTime)
-                /*タイミング調整のために-3.5をつけている。Time.deltaTimeを足すことにより
-                二つ以上のオブジェクトの生成を防ぐ。
-                */
+                if(i==0 && data_37_realtime[0]==0)//0秒目にノーツがある場合は0秒で出す。
                 {
-                    Instantiate(MessageObj[spawn_prefab[i]], new Vector3(0, 0, 0), Quaternion.identity);
+                    Instantiate(MessageObj[spawn_prefab[i]], new Vector3(-10, 0, 0), Quaternion.identity);
+                }
+                if (count_time > data_37_realtime[i] - spawn_time&& count_time < data_37_realtime[i]-spawn_time + Time.deltaTime)
+                { 
+                    Instantiate(MessageObj[spawn_prefab[i]], new Vector3(-10, 0, 0), Quaternion.identity);
                     //Vector3(x,y,z)第一引数を変えると生成されるｘ座標が変わる。
                     Debug.Log("data_37_realtime " + data_37_realtime);
                 }
