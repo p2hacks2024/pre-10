@@ -73,7 +73,7 @@ namespace Logger
             count_time += Time.deltaTime;
             for (int i = 0; i < count_37; i++)
             {
-                if (count_time > data_37_realtime[i] - 3.4 && count_time < data_37_realtime[i] - 3.4 + Time.deltaTime)
+                if (count_time > data_37_realtime[i] - 3.8 && count_time < data_37_realtime[i] - 3.8 + Time.deltaTime)
                 /*タイミング調整のために-3.5をつけている。Time.deltaTimeを足すことにより
                 二つ以上のオブジェクトの生成を防ぐ。
                 */
