@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ingame.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/title.unity
+    guid: be5b42c5c7cf8c0468c6363f674dff83
+  - enabled: 1
+    path: Assets/Scenes/OP_movie.unity
+    guid: 662a60ccdf0e625429c8cc2721099ac2
+  - enabled: 1
+    path: Assets/Scenes/readyKittysPlayTime.unity
+    guid: e90a1f5e4ad08804aa58f97ca4d87f6c
+  - enabled: 1
+    path: Assets/Scenes/Stage1(KittysPlayTime).unity
+    guid: 0b9da1faa66e4ff42a24bb726ca6d47c
+  - enabled: 1
+    path: Assets/Scenes/Stage2(NeedU20NeedU).unity
+    guid: 6cf93b254b2f8c14683a2bf019f0adca
+  - enabled: 1
+    path: Assets/Scenes/select.unity
+    guid: 970d5b6d5d567bf4bbba4540b0699757
+  - enabled: 1
+    path: Assets/Scenes/clear.unity
+    guid: 36674a985087e2c4e936d781fd05ce25
+  - enabled: 1
+    path: Assets/Scenes/readyNeedU20NeedU.unity
+    guid: 8b1e2609b5e22ab499d50092f373716c
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_UseUCBPForAssetBundles: 0
