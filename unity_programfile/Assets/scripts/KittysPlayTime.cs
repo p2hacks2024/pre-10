@@ -29,6 +29,26 @@ namespace Logger
         float real_time = 0;//クリアしたときのカウントのための時間
         float finish_time = 5;//一定スコアを超えたときに何秒後にクリア画面に遷移するかを決める
         [SerializeField] GameObject[] MessageObj; //prefabを複数指定。
+        double spawn_time;
+
+        double spawn_time_calculate(double spawn_x, double hit_x, double note_speed)//引数は一から順にprefabの生成するｘ座標、判定のｘ座標、ノートのスピードである。
+        {
+            double spawn_time;
+            spawn_time = (spawn_x - hit_x) / note_speed;
+            if (spawn_time > 0)
+            {
+                return spawn_time;
+            }
+            else if (spawn_time < 0)
+            {
+                return spawn_time * -1;
+            }
+            else
+            {
+                return 0;
+            }
+            //returnは正の数で返す
+        }
         private void Start()
         {
             var midiEventSet = _asset.template.events;
@@ -65,6 +85,7 @@ namespace Logger
              for (int i = 0; i < count_36; i++)
                  Debug.Log("data_36 " + data_36[i]);
             */
+            spawn_time = spawn_time_calculate(-10, 3, 5);
         }
 
         private void Update()
@@ -73,7 +94,7 @@ namespace Logger
             count_time += Time.deltaTime;
             for (int i = 0; i < count_37; i++)
             {
-                if (count_time > data_37_realtime[i] - 3.8 && count_time < data_37_realtime[i] - 3.8 + Time.deltaTime)
+                if (count_time > data_37_realtime[i] - spawn_time && count_time < data_37_realtime[i] - spawn_time + Time.deltaTime)
                 /*タイミング調整のために-3.5をつけている。Time.deltaTimeを足すことにより
                 二つ以上のオブジェクトの生成を防ぐ。
                 */

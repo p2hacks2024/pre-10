@@ -1,5 +1,13 @@
+using Unity.VisualScripting;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using System.Text;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
+using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Audio;
+
 
 public class ste2_JudgementArea : MonoBehaviour
 {
@@ -8,7 +16,7 @@ public class ste2_JudgementArea : MonoBehaviour
     //・近くにノーツがあるのか                Rayを飛ばして当たったら近い!
     //・どれぐらいの近さなのか => (評価)
 
-    [SerializeField] GameObject textEffectPrefab;//判定エフェクトのプレハブの受け取り
+    //[SerializeField] GameObject textEffectPrefab;//判定エフェクトのプレハブの受け取り
     [SerializeField] Vector2 judgementAreaSize;//
     Vector2 extendJudgementAreaSize = new Vector2(2, 0);
     double perfectArea;
@@ -19,9 +27,18 @@ public class ste2_JudgementArea : MonoBehaviour
     float real_time = 0;
     float finish_count = 0;
     int score = 0;
-    float finish_time = 5;
+    float finish_time = 1;
     string score_text = "";
     string count_text = "10";
+    [SerializeField] VideoPlayer videoPlayer;
+
+    AudioSource audioSource;
+
+    public PostProcessVolume postProcessVolume;
+    private ColorGrading colorGrading;
+
+    double saturationRealTime = 0;
+    double countTime = 0.2;
 
 
     private void Start()
@@ -30,9 +47,34 @@ public class ste2_JudgementArea : MonoBehaviour
         perfectArea = 0.25;//ジャッジバー / 2  の長さ (ジャッジバーの横の長さは目で1の長さにした)
         goodArea = 0.5;
         badArea = 1;  //全体
+
+        // PostProcessVolume の初期化
+        if (postProcessVolume != null && postProcessVolume.profile != null)
+        {
+            if (postProcessVolume.profile.TryGetSettings(out colorGrading))
+            {
+                Debug.Log("Color Grading found!");
+            }
+            else
+            {
+                Debug.LogWarning("Color Grading not found in the Post-Processing profile.");
+            }
+        }
+        else
+        {
+            Debug.LogError("PostProcessVolume or its profile is not assigned.");
+        }
+
+        audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
+        real_time += Time.deltaTime;
+        saturationRealTime += Time.deltaTime;
+        if (saturationRealTime > countTime)
+        {
+            SetSaturation(-80);
+        }
         real_time += Time.deltaTime;
         if (real_time > reload_time)
         {
@@ -54,34 +96,32 @@ public class ste2_JudgementArea : MonoBehaviour
                         Debug.Log(distance);
                         if (distance <= perfectArea)
                         {
-                            Debug.Log("execellent!!");
+                            Debug.Log("perfect");
                             Destroy(hit2D.collider.gameObject);
-                            GetComponent<AudioSource>().Play();//カメラのシャッター音
-                            //SpawnTextEffect("perfect", transform.position);//判定エフェクトの表示
-                            Instantiate(textEffectPrefab, new Vector3(325, 185, 0), Quaternion.identity);
                             score += 100;
                             score_text = score.ToString();
+                            SetSaturation(0);
+                            saturationRealTime = 0;
 
                         }
                         else if (distance < goodArea)
                         {
                             Debug.Log("good");
                             Destroy(hit2D.collider.gameObject);
-                            GetComponent<AudioSource>().Play();//カメラのシャッター音
-                            //SpawnTextEffect("good", transform.position);//判定エフェクトの表示
                             score += 75;
                             score_text = score.ToString();
+                            SetSaturation(0);
+                            saturationRealTime = 0;
 
                         }
                         else if (distance < badArea)
                         {
                             Debug.Log("bad");
                             Destroy(hit2D.collider.gameObject);
-                            GetComponent<AudioSource>().Play();//カメラのシャッター音
-                            //SpawnTextEffect("bad", transform.position);//判定エフェクトの表示
                             score += 50;
                             score_text = score.ToString();
-
+                            SetSaturation(0);
+                            saturationRealTime = 0;
                         }
                         //Destroy(hit2D.collider.gameObject);
                     }
@@ -92,6 +132,7 @@ public class ste2_JudgementArea : MonoBehaviour
         Debug.Log(count);
         if (Input.GetKeyDown(KeyCode.R))
         {
+            videoPlayer.Play();
             count = 100;
             count_text = count.ToString();
             real_time = 0;
@@ -100,8 +141,10 @@ public class ste2_JudgementArea : MonoBehaviour
         if (score > 2000)//scoreが一定を超えたらの条件分岐
         {//テキストでクリアとか出したらよさそう。
             finish_count += Time.deltaTime;
+            audioSource.volume -= Time.deltaTime;
             if (finish_count > finish_time)
-                SceneManager.LoadScene("clear(ste2)");//New Scene はSceneの名前に書き換える
+                //SceneManager.LoadScene("clear(ste1)");//New Scene はSceneの名前に書き換える
+                FadeManager.Instance.LoadScene("clear(ste2)", 1f);
 
         }
         count_text = count.ToString();
@@ -133,6 +176,15 @@ public class ste2_JudgementArea : MonoBehaviour
     //    judgementEffect.setText(message);
     //    Destroy(effectText, 0.5f);
     //}
+
+    public void SetSaturation(float saturationValue)
+    {
+        if (colorGrading != null)
+        {
+            colorGrading.saturation.value = saturationValue;
+            Debug.Log("satu : " + colorGrading.saturation.value);
+        }
+    }
 
 
     //当たり判定を可視化するための関数
