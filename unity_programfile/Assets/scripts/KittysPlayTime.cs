@@ -27,7 +27,7 @@ namespace Logger
         int score = 0;
         int[] spawn_prefab = new int[500];//どのオブジェクトを出すかの指定配列。
         float real_time = 0;//クリアしたときのカウントのための時間
-        float finish_time = 5;//一定スコアを超えたときに何秒後にクリア画面に遷移するかを決める
+        float finish_time = 1;//一定スコアを超えたときに何秒後にクリア画面に遷移するかを決める
         [SerializeField] GameObject[] MessageObj; //prefabを複数指定。
         private void Start()
         {
@@ -85,8 +85,12 @@ namespace Logger
 
               
             }
-            
-            
+
+
+            //if (Input.GetKeyDown(KeyCode.Space))
+            //{
+            //    GetComponent<AudioSource>().Play();//カメラのシャッター音
+            //}
              
 
         }

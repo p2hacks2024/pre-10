@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 using System.Text;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Audio;
 
 public class JudgementArea : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class JudgementArea : MonoBehaviour
     float real_time = 0;
     float finish_count = 0;
     int score = 0;
-    float finish_time=5;
+    float finish_time=1;
     string score_text = "0";
     string count_text = "10";
     //double realTime = 0;
@@ -35,6 +36,7 @@ public class JudgementArea : MonoBehaviour
 
     public PostProcessVolume postProcessVolume; // Post Process Volumeを割り当てる
     private ColorGrading colorGrading;          // Color Gradingエフェクトへの参照
+    AudioSource audioSource;
 
 
     //private void Start()
@@ -56,6 +58,7 @@ public class JudgementArea : MonoBehaviour
         {
             Debug.LogError("Color Grading not found in Post Process Volume.");
         }
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -92,7 +95,7 @@ public class JudgementArea : MonoBehaviour
                         {
                             Debug.Log("execellent!!");
                             Destroy(hit2D.collider.gameObject);
-                            GetComponent<AudioSource>().Play();//カメラのシャッター音
+                            //GetComponent<AudioSource>().Play();//カメラのシャッター音
                             //SpawnTextEffect("perfect", transform.position);//判定エフェクトの表示
                             //Instantiate(textEffectPrefab, new Vector3(325, 185, 0), Quaternion.identity);
                             score += 100;
@@ -106,7 +109,7 @@ public class JudgementArea : MonoBehaviour
                         {
                             Debug.Log("good");
                             Destroy(hit2D.collider.gameObject);
-                            GetComponent<AudioSource>().Play();//カメラのシャッター音
+                            //GetComponent<AudioSource>().Play();//カメラのシャッター音
                             //SpawnTextEffect("good", transform.position);//判定エフェクトの表示
                             score += 75;
                             score_text = score.ToString();
@@ -119,7 +122,7 @@ public class JudgementArea : MonoBehaviour
                         {
                             Debug.Log("bad");
                             Destroy(hit2D.collider.gameObject);
-                            GetComponent<AudioSource>().Play();//カメラのシャッター音
+                            //GetComponent<AudioSource>().Play();//カメラのシャッター音
                             //SpawnTextEffect("bad", transform.position);//判定エフェクトの表示
                             score += 50;
                             score_text = score.ToString();
@@ -142,11 +145,15 @@ public class JudgementArea : MonoBehaviour
             real_time = 0;
         }
         //テストはできていないけどこの下は動くと思う。
-        if (score > 5000)//scoreが一定を超えたらの条件分岐
+        if (score > 500)//scoreが一定を超えたらの条件分岐
         {//テキストでクリアとか出したらよさそう。
             finish_count += Time.deltaTime;
+            audioSource.volume -= Time.deltaTime;
             if (finish_count > finish_time)
-                SceneManager.LoadScene("clear");//New Scene はSceneの名前に書き換える
+            {
+                //SceneManager.LoadScene("clear");//New Scene はSceneの名前に書き換える
+                FadeManager.Instance.LoadScene("clear", 1f);
+            }
 
         }
         count_text = count.ToString();
