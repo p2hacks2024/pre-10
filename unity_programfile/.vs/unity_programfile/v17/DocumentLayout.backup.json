@@ -1,0 +1,377 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\judgementarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\judgementarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|c:\\users\\piker\\desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\clear4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clear4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\clear3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clear3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|c:\\users\\piker\\desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\ste4_judgementarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ste4_judgementarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\ste3_judgementarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ste3_judgementarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|c:\\users\\piker\\desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\stage4_button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stage4_button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\clear2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clear2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\ste2_judgementarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ste2_judgementarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\stage3_button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stage3_button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\stage1_button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stage1_button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\stage2_button1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stage2_button1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\needu20needu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\needu20needu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\kittysplaytime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\kittysplaytime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\start_button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\start_button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\judgementeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\judgementeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\kuromaki-\\newsurfaceshader.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\kuromaki-\\newsurfaceshader.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\clear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\movescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scripts\\Gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\option_button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\option_button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\title_audio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01B7FE10-BF07-F16D-2309-5A5FDBEDA024}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\title_audio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\assets\\scripts\\readykittysplaytime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\readykittysplaytime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clear4.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\clear4.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\clear4.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\clear4.cs",
+              "RelativeToolTip": "Assets\\scripts\\clear4.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T04:37:52.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ste4_JudgementArea.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\ste4_JudgementArea.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ste4_JudgementArea.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\ste4_JudgementArea.cs",
+              "RelativeToolTip": "Assets\\scripts\\ste4_JudgementArea.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAGgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T04:35:45.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ste3_JudgementArea.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\ste3_JudgementArea.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ste3_JudgementArea.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\ste3_JudgementArea.cs",
+              "RelativeToolTip": "Assets\\scripts\\ste3_JudgementArea.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAkwIEAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T04:17:27.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Stage4_Button.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Stage4_Button.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Stage4_Button.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Stage4_Button.cs",
+              "RelativeToolTip": "Assets\\scripts\\Stage4_Button.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T04:12:18.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clear3.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\clear3.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\clear3.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\clear3.cs",
+              "RelativeToolTip": "Assets\\scripts\\clear3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T04:06:24.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "NewSurfaceShader.shader",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\kuromaki-\\NewSurfaceShader.shader",
+              "RelativeDocumentMoniker": "Assets\\kuromaki-\\NewSurfaceShader.shader",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\kuromaki-\\NewSurfaceShader.shader",
+              "RelativeToolTip": "Assets\\kuromaki-\\NewSurfaceShader.shader",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2024-12-14T01:44:31.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "clear2.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\clear2.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\clear2.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\clear2.cs",
+              "RelativeToolTip": "Assets\\scripts\\clear2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T00:57:22.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ste2_JudgementArea.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\ste2_JudgementArea.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ste2_JudgementArea.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\ste2_JudgementArea.cs",
+              "RelativeToolTip": "Assets\\scripts\\ste2_JudgementArea.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAJkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T00:47:09.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Stage1_Button.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Stage1_Button.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Stage1_Button.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Stage1_Button.cs",
+              "RelativeToolTip": "Assets\\scripts\\Stage1_Button.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:29:36.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JudgementArea.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\JudgementArea.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\JudgementArea.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\JudgementArea.cs",
+              "RelativeToolTip": "Assets\\scripts\\JudgementArea.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAB0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T02:40:14.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Stage3_Button.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Stage3_Button.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Stage3_Button.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Stage3_Button.cs",
+              "RelativeToolTip": "Assets\\scripts\\Stage3_Button.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T03:38:22.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Start_Button.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Start_Button.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Start_Button.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Start_Button.cs",
+              "RelativeToolTip": "Assets\\scripts\\Start_Button.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T10:19:51.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "KittysPlayTime.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\KittysPlayTime.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\KittysPlayTime.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\KittysPlayTime.cs",
+              "RelativeToolTip": "Assets\\scripts\\KittysPlayTime.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFAAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T07:55:21.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "needU20needU.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\needU20needU.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\needU20needU.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\needU20needU.cs",
+              "RelativeToolTip": "Assets\\scripts\\needU20needU.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEwAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T03:24:49.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "JudgementEffect.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\JudgementEffect.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\JudgementEffect.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\JudgementEffect.cs",
+              "RelativeToolTip": "Assets\\scripts\\JudgementEffect.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:48:14.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Stage2_Button1.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Stage2_Button1.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Stage2_Button1.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Stage2_Button1.cs",
+              "RelativeToolTip": "Assets\\scripts\\Stage2_Button1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T00:18:05.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "clear.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\clear.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\clear.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\clear.cs",
+              "RelativeToolTip": "Assets\\scripts\\clear.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T20:15:30.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "moveScene.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\moveScene.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\moveScene.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\moveScene.cs",
+              "RelativeToolTip": "Assets\\scripts\\moveScene.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxMAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T10:35:43.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "readyKittysPlayTime.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\readyKittysPlayTime.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\readyKittysPlayTime.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\readyKittysPlayTime.cs",
+              "RelativeToolTip": "Assets\\scripts\\readyKittysPlayTime.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T19:25:44.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Option_Button.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Option_Button.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Option_Button.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Option_Button.cs",
+              "RelativeToolTip": "Assets\\scripts\\Option_Button.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T10:10:47.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Title_Audio.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Title_Audio.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Title_Audio.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Title_Audio.cs",
+              "RelativeToolTip": "Assets\\scripts\\Title_Audio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T10:06:34.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Gamemanager.cs",
+              "DocumentMoniker": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Gamemanager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Gamemanager.cs",
+              "ToolTip": "C:\\Users\\piker\\Desktop\\workspace\\pike_clone2\\pre-10\\unity_programfile\\Assets\\scripts\\Gamemanager.cs",
+              "RelativeToolTip": "Assets\\scripts\\Gamemanager.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T03:28:58.22Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
