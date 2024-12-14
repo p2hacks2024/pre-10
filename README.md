@@ -72,7 +72,7 @@ notionを使ってのタスク管理
 ...  C#
 
 利用したフレームワーク・ライブラリ  
-...  Unity, MIDI Animation Track
+...  Unity,MIDI Animation Track
 
 その他開発に使用したツール・サービス
-...chatGPT  
+...chatGPT,corelvector,aviutl,studio One,resprite,
