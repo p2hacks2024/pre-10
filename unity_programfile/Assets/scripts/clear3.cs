@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class readyNeedU20NeedU : MonoBehaviour
+public class clear3 : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -14,7 +14,7 @@ public class readyNeedU20NeedU : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("NeedU20NeedU");//New Scene ‚ÍScene‚Ì–¼‘O‚É‘‚«Š·‚¦‚é
+            SceneManager.LoadScene("sele(3 - 4)");//New Scene ‚ÍScene‚Ì–¼‘O‚É‘‚«Š·‚¦‚é
         }
     }
 }

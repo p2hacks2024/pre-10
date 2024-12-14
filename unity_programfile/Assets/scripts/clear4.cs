@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class readyKittysPlayTime : MonoBehaviour
+public class clear4 : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -14,7 +14,7 @@ public class readyKittysPlayTime : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("KittysPlayTime");//New Scene ‚ÍScene‚Ì–¼‘O‚É‘‚«Š·‚¦‚é
+            SceneManager.LoadScene("End");//New Scene ‚ÍScene‚Ì–¼‘O‚É‘‚«Š·‚¦‚é
         }
     }
 }

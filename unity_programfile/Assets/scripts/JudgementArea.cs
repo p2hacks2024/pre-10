@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Text;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class JudgementArea : MonoBehaviour
 {
@@ -24,16 +25,17 @@ public class JudgementArea : MonoBehaviour
     float finish_count = 0;
     int score = 0;
     float finish_time=5;
-    string score_text = "0";
+    string score_text = "";
     string count_text = "10";
+    [SerializeField] VideoPlayer videoPlayer;
 
 
     private void Start()
     {
         //今は、ジャッジメントエリアは 4 にしてる
-        perfectArea = 0.5;//ジャッジバー / 2  の長さ (ジャッジバーの横の長さは目で1の長さにした)
-        goodArea = 1;
-        badArea = 2;  //全体
+        perfectArea = 0.25;//ジャッジバー / 2  の長さ (ジャッジバーの横の長さは目で1の長さにした)
+        goodArea = 0.5;
+        badArea = 1;  //全体
     }
     private void Update()
     {
@@ -58,7 +60,7 @@ public class JudgementArea : MonoBehaviour
                         Debug.Log(distance);
                         if (distance <= perfectArea)
                         {
-                            Debug.Log("execellent!!");
+                            Debug.Log("perfect");
                             Destroy(hit2D.collider.gameObject);
                             GetComponent<AudioSource>().Play();//カメラのシャッター音
                             //SpawnTextEffect("perfect", transform.position);//判定エフェクトの表示
@@ -96,26 +98,39 @@ public class JudgementArea : MonoBehaviour
         Debug.Log(count);
         if (Input.GetKeyDown(KeyCode.R))
         {
-            count = 10;
+            videoPlayer.Play();
+
+            count = 100;
             count_text = count.ToString();
             real_time = 0;
         }
         //テストはできていないけどこの下は動くと思う。
-        if (score > 5000)//scoreが一定を超えたらの条件分岐
+        if (score > 2000)//scoreが一定を超えたらの条件分岐
         {//テキストでクリアとか出したらよさそう。
             finish_count += Time.deltaTime;
             if (finish_count > finish_time)
-                SceneManager.LoadScene("clear");//New Scene はSceneの名前に書き換える
+                SceneManager.LoadScene("clear(ste1)");//New Scene はSceneの名前に書き換える
 
         }
         count_text = count.ToString();
     }
+
+    private GUIStyle labelStyle;
+
     private void OnGUI()
     {
-        Rect scoreRect = new Rect(10, 10, 300, 50);
-        Rect countRect = new Rect(10, 30, 300, 50);
-        GUI.Label(scoreRect, "SCORE : " + score_text);
-        GUI.Label(countRect, "RELOAD : " + count_text);
+
+        // GUIStyleのインスタンスを作成
+        labelStyle = new GUIStyle();
+
+        // フォントサイズを設定
+        labelStyle.fontSize = 80; // 文字サイズを大きく
+        labelStyle.normal.textColor = Color.white; // 文字色を白に設定（必要に応じて変更）
+
+        Rect scoreRect = new Rect(700, 30, 600, 400);
+        Rect countRect = new Rect(700, 200, 600, 400);
+        GUI.Label(scoreRect, "SCORE : " + score_text, labelStyle);
+        GUI.Label(countRect, "RELOAD : " + count_text, labelStyle);
     }
 
     //判定エフェクトを表示する関数
@@ -140,7 +155,7 @@ public class JudgementArea : MonoBehaviour
         //Gizmos.color = Color.yellow;
         //Gizmos.DrawCube(transform.position, new Vector2(2, 3)); //
         Gizmos.color = Color.red;
-        Gizmos.DrawCube(transform.position, new Vector2(2, 5));
+        Gizmos.DrawCube(transform.position, new Vector2(0.5f, 1));
         //Gizmos.DrawCube
 
     }

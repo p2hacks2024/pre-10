@@ -14,7 +14,7 @@ public class clear : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("select");//New Scene ‚ÍScene‚Ì–¼‘O‚É‘‚«Š·‚¦‚é
+            SceneManager.LoadScene("sele(1 - 2)");//New Scene ‚ÍScene‚Ì–¼‘O‚É‘‚«Š·‚¦‚é
         }
     }
 }

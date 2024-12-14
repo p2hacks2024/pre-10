@@ -74,7 +74,7 @@ namespace Logger
                 二つ以上のオブジェクトの生成を防ぐ。
                 */
                 {
-                    Instantiate(MessageObj[spawn_prefab[i]], new Vector3(-10, 0, 0), Quaternion.identity);
+                    Instantiate(MessageObj[spawn_prefab[i]], new Vector3(-10, -3.28f, 0), Quaternion.identity);
                     //Vector3(x,y,z)第一引数を変えると生成されるｘ座標が変わる。
                     Debug.Log("data_37_realtime " + data_37_realtime);
                 }

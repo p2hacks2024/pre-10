@@ -17,7 +17,7 @@ public class moveScene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("select");//New Scene ‚ÍScene‚Ì–¼‘O‚É‘‚«Š·‚¦‚é
+            SceneManager.LoadScene("sele(title - 1)");//New Scene ‚ÍScene‚Ì–¼‘O‚É‘‚«Š·‚¦‚é
         }
     }
 }
